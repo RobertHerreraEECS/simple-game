@@ -8,7 +8,7 @@ include_directories( ${CURSES_INCLUDE_DIRS} )
 add_executable(
   main
   main.cpp
-)
+        Sprite.cpp Sprite.h uuidUtil.cpp uuidUtil.h)
 
 target_link_libraries( main ${CURSES_LIBRARIES} )
 
