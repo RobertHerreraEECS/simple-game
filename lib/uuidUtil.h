@@ -5,12 +5,12 @@
 #ifndef SIMPLE_GAME_UUIDUTIL_H
 #define SIMPLE_GAME_UUIDUTIL_H
 
-#include <boost/uuid/uuid.hpp>            // uuid class
-#include <boost/uuid/uuid_io.hpp>         // streaming operators etc.
+#include <boost/uuid/uuid.hpp>
+#include <string>
 
 class uuidUtil {
 public:
-    static boost::uuids::uuid getUUID();
+    static std::string getUUID();
 };
 
 

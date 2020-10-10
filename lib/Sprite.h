@@ -10,17 +10,17 @@
 
 class Sprite {
 private:
-    boost::uuids::uuid  spriteId;
-    int row;
-    int col;
+    std::string spriteId;
+    int row{};
+    int col{};
 public:
     Sprite();
-    Sprite(boost::uuids::uuid spriteId);
+    Sprite(std::string spriteId);
     Sprite(int row, int col);
-    void setRow(int row);
-    void setCol(int col);
-    void setCoor(int row, int col);
-    boost::uuids::uuid getId();
+    int setRow(int row);
+    int setCol(int col);
+    int setCoor(int row, int col);
+    std::string getId();
     int getRow();
     int getCol();
    // std::tuple<int, int> getCoor();
