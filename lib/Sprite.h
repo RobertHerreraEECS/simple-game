@@ -8,17 +8,17 @@
 
 class Sprite {
 private:
-    int spriteId;
-    int row;
-    int col;
+    std::string spriteId;
+    int row{};
+    int col{};
 public:
     Sprite();
-    Sprite(int spriteId);
+    Sprite(std::string spriteId);
     Sprite(int row, int col);
     int setRow(int row);
     int setCol(int col);
     int setCoor(int row, int col);
-    int getId();
+    std::string getId();
     int getRow();
     int getCol();
     std::tuple<int, int> getCoor();

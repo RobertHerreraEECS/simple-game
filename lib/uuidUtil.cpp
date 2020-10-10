@@ -7,7 +7,9 @@
 #include <boost/uuid/uuid_generators.hpp> // generators
 #include <boost/uuid/uuid_io.hpp>         // streaming operators etc.
 
-boost::uuids::uuid static getUUID()
+std::string getUUID()
 {
-    return boost::uuids::random_generator()();
+    boost::uuids::uuid uuid = boost::uuids::random_generator()();
+    std::string uuidStr = to_string(uuid);
+    return uuidStr;
 }

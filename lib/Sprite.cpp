@@ -6,12 +6,15 @@
 #include "uuidUtil.h"
 #include "Sprite.h"
 
-Sprite::Sprite() { spriteId= uuidUtil::getUUID(); }
+Sprite::Sprite() {
+    spriteId = uuidUtil::getUUID();
+    setCoor(0, 0);
+}
 Sprite::Sprite(int x, int y) { setCoor(x, y); }
 int Sprite::setCol(int y) { col=y; }
 int Sprite::setRow(int x) { row=x; }
 int Sprite::setCoor(int x, int y) { setCol(y); setRow(x); }
-int Sprite::getId() { return spriteId; }
+std::string Sprite::getId() { return spriteId; }
 int Sprite::getRow()
 {
     return row;

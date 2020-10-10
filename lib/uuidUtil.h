@@ -6,10 +6,11 @@
 #define SIMPLE_GAME_UUIDUTIL_H
 
 #include <boost/uuid/uuid.hpp>
+#include <string>
 
 class uuidUtil {
 public:
-    int static getUUID();
+    static std::string getUUID();
 };
 
 
