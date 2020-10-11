@@ -6,20 +6,21 @@
 #define SIMPLE_GAME_SPRITE_H
 
 #include <tuple>
+#include <string>
 #include <boost/uuid/uuid.hpp>
 
 class Sprite {
 private:
     std::string spriteId;
-    int row{};
-    int col{};
+    int row;
+    int col;
 public:
     Sprite();
     Sprite(std::string spriteId);
     Sprite(int row, int col);
-    int setRow(int row);
-    int setCol(int col);
-    int setCoor(int row, int col);
+    void setRow(int row);
+    void setCol(int col);
+    void setCoor(int row, int col);
     std::string getId();
     int getRow();
     int getCol();

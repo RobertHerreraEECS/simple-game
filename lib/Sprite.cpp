@@ -18,16 +18,13 @@ void Sprite::setRow(int x) { row=x; }
 
 void Sprite::setCoor(int x, int y) { setCol(y); setRow(x); }
 
-boost::uuids::uuid Sprite::getId() { return spriteId; }
-
-int Sprite::setCol(int y) { col=y; }
-int Sprite::setRow(int x) { row=x; }
-int Sprite::setCoor(int x, int y) { setCol(y); setRow(x); }
 std::string Sprite::getId() { return spriteId; }
+
 int Sprite::getRow()
 {
     return row;
 }
+
 int Sprite::getCol()
 {
     return col;
