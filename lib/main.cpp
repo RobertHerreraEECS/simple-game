@@ -2,12 +2,16 @@
 #include <cstdlib> 
 #include <ctime> 
 #include <curses.h>
+
+#include "Sprite.h"
      
 #define ITERMAX 10000
 
 int main(void) {
 
+    Sprite sprite1;
 
+    /*
     long iter;
     int yi, xi;
     int y[3], x[3];
@@ -16,14 +20,14 @@ int main(void) {
 
     srand((unsigned)time(0));
     
-    /* initialize curses */
+    // initialize curses
     initscr();
     cbreak();
     noecho();
     
     clear();
     
-    /* initialize triangle */
+    // initialize triangle
     maxlines = LINES - 1;
     maxcols = COLS - 1;
     
@@ -40,12 +44,12 @@ int main(void) {
     mvaddch(y[1], x[1], '1');
     mvaddch(y[2], x[2], '2');
     
-    /* initialize yi,xi with random values */
+    // initialize yi,xi with random values
     yi = rand() % maxlines;
     xi = rand() % maxcols;
     mvaddch(yi, xi, '.');
     
-    /* iterate the triangle */
+    // iterate the triangle
     for (iter = 0; iter < ITERMAX; iter++) {
         index = rand() % 3;
     
@@ -56,7 +60,7 @@ int main(void) {
         refresh();
     }
     
-    /* done */
+    // done
     mvaddstr(maxlines, 0, "Press any key to quit");
     refresh();
 
@@ -64,4 +68,7 @@ int main(void) {
     endwin();
 
     exit(0);
+    */
+
+
 }
