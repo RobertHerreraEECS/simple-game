@@ -14,6 +14,7 @@ add_executable(
   Sprite.h
   uuidUtil.cpp 
   uuidUtil.h
+  GameManager.cpp
 )
 
 target_link_libraries( main ${CURSES_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY})
