@@ -24,7 +24,7 @@ public:
     std::string getId();
     int getRow();
     int getCol();
-   // std::tuple<int, int> getCoor();
+    std::tuple<int, int> getCoor();
 };
 
 

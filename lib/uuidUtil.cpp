@@ -6,7 +6,7 @@
 #include <boost/uuid/uuid_generators.hpp> // generators
 #include <boost/lexical_cast.hpp>
 
-std::string getUUID()
+std::string uuidUtil::getUUID()
 {
     boost::uuids::uuid uuid = boost::uuids::random_generator()();
     std::string uuidStr = boost::lexical_cast<std::string>(uuid);

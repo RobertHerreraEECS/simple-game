@@ -1,8 +1,6 @@
 //
 // Created by plascenciaj on 10/10/20.
 //
-
-#include <tuple>
 #include "uuidUtil.h"
 #include "Sprite.h"
 
@@ -29,9 +27,9 @@ int Sprite::getCol()
 {
     return col;
 }
-/*
+
 std::tuple<int, int> Sprite::getCoor()
 {
     return std::make_tuple(row, col);
 }
-*/
+
