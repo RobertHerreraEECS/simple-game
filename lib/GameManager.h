@@ -28,6 +28,16 @@ public:
     void printScreen();
 
     /**
+     * @brief Get the user's input
+     */
+    int parseUserInput();
+
+    /**
+     * @brief Clear terminal 
+     */
+    void clearScreen();
+
+    /**
      * @brief Intialize all values on the screen
      * @param value The value that will encompass the entire screen. 
      */

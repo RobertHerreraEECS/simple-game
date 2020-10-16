@@ -7,6 +7,8 @@
 #define ROWSMAX 20
 #define COLSMAX 20
 
+//TODO: organize a bit more but this will do for now
+
 void GameManager::setScreenSize(size_t rows, size_t cols) {
 
 }
@@ -22,8 +24,6 @@ void GameManager::printScreen() {
     // initialize curses
     initscr();
     cbreak();
-    noecho();
-    
     clear();
    
     // print screen
@@ -38,16 +38,30 @@ void GameManager::printScreen() {
         }
     }
    
-    // done
-    mvaddstr(ROWSMAX, 0, "Press any key to quit");
+    // usage
+    mvaddstr(ROWSMAX, 0, "Press 'q' to quit");
     refresh();
+}
 
-    getch();
+int GameManager::parseUserInput() {
+
+    //noecho(); // keeps characters from being printed
+    int userInput = getch();
+    mvaddstr(ROWSMAX + 2, 0, std::to_string(userInput).c_str());
+
+    mvaddch(5, 5, (char) userInput);
+
+    refresh();
+    if (userInput == 113) {
+        return -1;
+    }
+    return userInput;
+
+}
+
+void GameManager::clearScreen() {
+    refresh();
     endwin();
-
 }
 
-
-void GameManager::initializeScreen(int value) {
-
-}
+void GameManager::initializeScreen(int value) {}
